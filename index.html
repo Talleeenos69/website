@@ -15,34 +15,36 @@
 		<div class="scrollBarFill"  id="scrollBarFill"></div>
 	</div>
 	<!--Home Button-->
-	<div class="home-button" onclick="">
+	<a href="http://computerbytes.duckdns.org">
+	<div class="home-button" onclick="" title="Home">
 		<img src="./img/home.svg" class="home-button-image">
 	</div>
+	</a>
 
 	<!--Socials in a flex container-->
 	<div class="side-bar">
 		<div class="flex-container">
-			<div class="flex-item"> 
+			<div class="flex-item" title="GLCHS Discord Server"> 
 				<a href="https://discord.gg/SWSFJ6Zq9S" target="_blank">
 					<img src="./img/discord.svg" style="width: 100%">
 				</a>
 			</div>
-			<div class="flex-item">
+			<div class="flex-item" title="Visit my YouTube channel">
 				<a href="https://www.youtube.com/channel/UCNq6PLdcdN03pP_NHyN5eyA" target="_blank">
 					<img src="./img/youtube.svg" style="width: 100%">
 				</a>
 			</div>
-			<div class="flex-item">
+			<div class="flex-item" title="Play my games at itch.io">
 				<a href="https://talleeenos69.itch.io/" target="_blank">
 					<img src="./img/itch.svg" style="width: 100%">
 				</a>
 			</div>
-			<div class="flex-item">
+			<div class="flex-item" title="See more projects on Github">
 				<a href="https://github.com/Talleeenos69" target="_blank">
 					<img src="./img/github.svg" style="width: 100%; ">
 				</a>
 			</div>
-			<div class="flex-item">
+			<div class="flex-item" title="Ask questions or answer mine on Stackoverflow">
 				<a href="https://stackoverflow.com/users/21269564/talleeenos69" target="_blank">
 					<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.anilkhichar.com%2Fassets%2Fimages%2Ficon-stackoverflow.png&f=1&nofb=1&ipt=4639a5b338768ea82d65875f983b944946cdf22cc74e65baa8b1e5e4062c750c&ipo=images" style="width: 100%">
 				</a>
@@ -60,32 +62,37 @@
 				<div class="news-content"> Contribute &#129309; </div>
 				<div class="news-content"> About &#10067; </div>
 				<div class="news-content"> Tech News! &#9881; </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
-				<div class="news-content"> Empty Container </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content"> Empty Bottle! </div>
 		</div>	 
 		</div> 
 	</div>
+	<!--Embed html files into the website's content section-->
+	<!--<div class="iframe-wrapper"> </div>
+	<iframe class="iframe-embed"></iframe>-->
 	<script>
 	window.onscroll = function() {scrollBar()};
 
@@ -94,6 +101,7 @@
 		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 		var scrolled = (winScroll / height) * 100;
 		document.getElementById("scrollBarFill").style.width = scrolled + "%";	
+		console.log(window.innerWidth, window.outerWidth);
 	} 
 	</script>	
 </body>
