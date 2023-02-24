@@ -121,7 +121,11 @@
 		background-color: #1c1e1f;
 		transition: 0.1s;
 		overflow-x: hidden;
-		
+	}
+	@media only screen and (max-width: 1026px) {
+		.side-bar {
+			display: none;
+		}
 	}
 	.side-bar-socials {
 		position: fixed;
