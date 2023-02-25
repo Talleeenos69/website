@@ -4,7 +4,7 @@
 <head>
 	<title> 🖥 Tallen's Server</title>
 </head>
-<body style="background-color: #272a2c">
+<body style="background-color: #272a2c" onload="loadWelcome()">
 	<button onclick="toggleSideBar()" id="toggleSideBar" class="toggleSideBarButton">
 		<img src="./img/showBar.svg" class="showBarThreeLines">
 	</button>
@@ -67,7 +67,7 @@
 				<div class="news-content"> Contribute &#129309; </div>
 				<div class="news-content"> About &#10067; </div>
 				<div class="news-content"> Tech News! &#9881; </div>
-				<div class="news-content"> Empty Bottle! </div>
+				<div class="news-content" id="b1" onClick="b1()"> Empty Bottle! </div>
 				<div class="news-content"> Empty Bottle! </div>
 				<div class="news-content"> Empty Bottle! </div>
 				<div class="news-content"> Empty Bottle! </div>
@@ -87,36 +87,14 @@
 		</div> 
 	</div>
 	<!--Embed html files into the website's content section-->
-	<!--<div class="iframe-wrapper"> </div>
-	<iframe class="iframe-embed"></iframe>-->
-	<script>
-	window.onscroll = function() {scrollBar()};
+	<div class="iframe-wrapper" id="iframe-wrapper">
+		<iframe id="iFrame" class="iframe-embed"></iframe>
+	</div>
 
-	function scrollBar() {
-		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		var scrolled = (winScroll / height) * 100;
-		document.getElementById("scrollBarFill").style.width = scrolled + "%";	
-		console.log(window.innerWidth, window.outerWidth);
-	} 
-	</script>	
-	<script>
-		const toggleBtn = document.getElementById('toggleSideBar');
-		const sideBar = document.getElementById('side-bar');
-
-		function toggleDivVisibility() {
- 			if (window.innerWidth < 770) {
-   				sideBar.classList.add('hidden');
-  			} else {
-  				sideBar.classList.remove('hidden');
-  			}
-		}
-
-		toggleBtn.addEventListener('click', () => {
-			sideBar.classList.toggle('hidden');
-		});
-		window.addEventListener('resize', toggleDivVisibility);
-		toggleDivVisibility();
-	</script>
+	<!--JavaScripts-->
+	<script src="./js/scrollbar.js"></script>	
+	<script src="./js/hideSideBar.js"></script>
+	<script src="./js/changeIframeContent.js"></script>
+	<script src="./js/changeIframeWidth.js"></script>
 </body>
 </html>

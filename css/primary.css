@@ -60,7 +60,7 @@
 		left: 20px;
 	}
 	.flex-container {
-		position: absolute;
+		position: fixed;
 		min-width: 50px;
 		max-width: 50px;
 		padding: px;
@@ -241,15 +241,6 @@
 		left: 10px;
 		margin-left: 4px;
 	}
-	.iframe-wrapper {
-		float: right;
-		background-color: aliceblue;
-		height: 100vh;
-		width: 50%;
-	}
-	.iframe-embed {
-		float: left;
-	}
 	.toggleSideBarButton {
 		position: fixed;
 		left: 0px;
@@ -267,10 +258,34 @@
 	}
 	.showBarThreeLines {
 		position: relative;
-		height: 45px;
-		transition: 0.2s;
+		width: 35px;
+		transition: 0.1s;
+		padding: 5px;
+		filter: brightness(100%);
 	}
 	.showBarThreeLines:hover {
-		height: 45px;
-		left: 10px;
+		filter: brightness(50%);
+	}
+	.iframe-embed {
+		right: 0;
+		bottom: 0;
+		float: right;
+		width: 100%;
+		margin-top: 100px;
+		height: 100%;
+	}
+	.iframe-wrapper {
+		position: absolute;
+		right: 0;
+		float: right;
+		background-color: aliceblue;
+		height: 100vh;
+		z-index: -100;
+		top: 0;
+		margin-top: 0;
+	}
+	.iframe-wrapper.wide {
+		float: right;
+		background-color: aliceblue;
+		height: 100vh;
 	}

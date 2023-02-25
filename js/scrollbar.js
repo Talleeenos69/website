@@ -5,4 +5,5 @@ function scrollBar() {
 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 	var scrolled = (winScroll / height) * 100;
 	document.getElementById("scrollBarFill").style.width = scrolled + "%";	
+	console.log(window.innerWidth, window.outerWidth);
 } 
