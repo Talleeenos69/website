@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<link type="text/css" href="css/primary.css" rel="stylesheet" />
+<link type="text/css" href="css/primary.css" rel="stylesheet" >
 <html>
 <head>
 	<title> 🖥 Tallen's Server</title>
 </head>
 <body style="background-color: #272a2c">
+	<button onclick="toggleSideBar()" id="toggleSideBar" class="toggleSideBarButton">
+		<img src="./img/showBar.svg" class="showBarThreeLines">
+	</button>
 	<div class="headerBar">
 		<p style="color: white; left: 20px; font-size: 50px; top: -42px; position: absolute;">Server</p>
 		<img src="./img/logo.png" class="logo">
@@ -16,42 +19,44 @@
 	</div>
 	<!--Home Button-->
 	<a href="http://computerbytes.duckdns.org">
-	<div class="home-button" onclick="" title="Home">
+	<div class="home-button" title="Home">
 		<img src="./img/home.svg" class="home-button-image">
 	</div>
 	</a>
 
 	<!--Socials in a flex container-->
-	<div class="side-bar">
-		<div class="flex-container">
-			<div class="flex-item" title="GLCHS Discord Server"> 
-				<a href="https://discord.gg/SWSFJ6Zq9S" target="_blank">
-					<img src="./img/discord.svg" style="width: 100%">
-				</a>
-			</div>
-			<div class="flex-item" title="Visit my YouTube channel">
-				<a href="https://www.youtube.com/channel/UCNq6PLdcdN03pP_NHyN5eyA" target="_blank">
-					<img src="./img/youtube.svg" style="width: 100%">
-				</a>
-			</div>
-			<div class="flex-item" title="Play my games at itch.io">
-				<a href="https://talleeenos69.itch.io/" target="_blank">
-					<img src="./img/itch.svg" style="width: 100%">
-				</a>
-			</div>
-			<div class="flex-item" title="See more projects on Github">
-				<a href="https://github.com/Talleeenos69" target="_blank">
-					<img src="./img/github.svg" style="width: 100%; ">
-				</a>
-			</div>
-			<div class="flex-item" title="Ask questions or answer mine on Stackoverflow">
-				<a href="https://stackoverflow.com/users/21269564/talleeenos69" target="_blank">
-					<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.anilkhichar.com%2Fassets%2Fimages%2Ficon-stackoverflow.png&f=1&nofb=1&ipt=4639a5b338768ea82d65875f983b944946cdf22cc74e65baa8b1e5e4062c750c&ipo=images" style="width: 100%">
-				</a>
-			</div>
+	<div class="flex-container">
+		<div class="flex-item" title="GLCHS Discord Server"> 
+			<a href="https://discord.gg/SWSFJ6Zq9S" target="_blank">
+				<img src="./img/discord.svg" style="width: 100%">
+			</a>
 		</div>
-		<div class="side-bar-socials"></div>
+		<div class="flex-item" title="Visit my YouTube channel">
+			<a href="https://www.youtube.com/channel/UCNq6PLdcdN03pP_NHyN5eyA" target="_blank">
+				<img src="./img/youtube.svg" style="width: 100%">
+			</a>
+		</div>
+		<div class="flex-item" title="Play my games at itch.io">
+			<a href="https://talleeenos69.itch.io/" target="_blank">
+				<img src="./img/itch.svg" style="width: 100%">
+			</a>
+		</div>
+		<div class="flex-item" title="See more projects on Github">
+			<a href="https://github.com/Talleeenos69" target="_blank">
+				<img src="./img/github.svg" style="width: 100%; ">
+			</a>
+		</div>
+		<div class="flex-item" title="Ask questions or answer mine on Stackoverflow">
+			<a href="https://stackoverflow.com/users/21269564/talleeenos69" target="_blank">
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.anilkhichar.com%2Fassets%2Fimages%2Ficon-stackoverflow.png&f=1&nofb=1&ipt=4639a5b338768ea82d65875f983b944946cdf22cc74e65baa8b1e5e4062c750c&ipo=images" style="width: 100%">
+			</a>
+		</div>
+	</div>
 
+	<div class="side-bar-socials"></div>
+
+	<!--Side Bar div-->
+	<div class="side-bar" id="side-bar">
 		<!--Add new News sections by copying and pasting the <div>s-->
 		<div class="news-wrapper">
 			<div class="news-container">
@@ -62,15 +67,6 @@
 				<div class="news-content"> Contribute &#129309; </div>
 				<div class="news-content"> About &#10067; </div>
 				<div class="news-content"> Tech News! &#9881; </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
-				<div class="news-content"> Empty Bottle! </div>
 				<div class="news-content"> Empty Bottle! </div>
 				<div class="news-content"> Empty Bottle! </div>
 				<div class="news-content"> Empty Bottle! </div>
@@ -104,5 +100,23 @@
 		console.log(window.innerWidth, window.outerWidth);
 	} 
 	</script>	
+	<script>
+		const toggleBtn = document.getElementById('toggleSideBar');
+		const sideBar = document.getElementById('side-bar');
+
+		function toggleDivVisibility() {
+ 			if (window.innerWidth < 770) {
+   				sideBar.classList.add('hidden');
+  			} else {
+  				sideBar.classList.remove('hidden');
+  			}
+		}
+
+		toggleBtn.addEventListener('click', () => {
+			sideBar.classList.toggle('hidden');
+		});
+		window.addEventListener('resize', toggleDivVisibility);
+		toggleDivVisibility();
+	</script>
 </body>
 </html>
