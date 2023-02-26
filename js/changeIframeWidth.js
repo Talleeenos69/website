@@ -9,5 +9,7 @@ function setwidth() {
     }
 }
 
+window.addEventListener('click', setwidth);
+setwidth();
 window.addEventListener('resize', setwidth);
 setwidth();

@@ -1,8 +1,8 @@
 const IFrame=document.getElementById("iFrame");
 
-function b1() {
-    IFrame.src = "http://glchsserver.duckdns.org/";
+function mc() {
+    IFrame.src = "./html/minecraft.html";
 }
 function loadWelcome() {
-    IFrame.src = "index.html";
+    IFrame.src = "https://chat.openai.com/chat";
 }

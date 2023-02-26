@@ -23,3 +23,7 @@ p {
 .text {
     color: white;
 }
+.remove-hyperlinks {
+    text-decoration: none;
+    color: #c06dff;
+}
