@@ -5,7 +5,9 @@ function setwidth() {
         IFrameWrapper.style.width = "calc(100% - 56px)";
     }
     else{
+        if (window.innerWidth > 800) {
         IFrameWrapper.style.width = "calc(100% - 350px)";
+        }
     }
 }
 

@@ -22,8 +22,72 @@ p {
 }
 .text {
     color: white;
+    width: 70%;
+    margin-left: 30px;
+}
+.smallText {
+    color: white;
+    width: 70%;
+    margin-left: 30px;
+    font-size: 10px;
+}
+.textBold {
+    color: #dcadff;
+    font-weight: bold;
+    width: 70%;
+    margin-left: 30px;
+    font-size: 16px;
 }
 .remove-hyperlinks {
     text-decoration: none;
     color: #c06dff;
+}
+.hover-img {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    width: 300px;
+    border-radius: 10px;
+    border: #c06dff;
+    border-width: 2px;
+    border-style: solid;
+}
+.scrollBar {
+    scrollbar-width: thin;
+    scrollbar-color: #540095 #080808;
+}
+.scrollBar::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    left: 100px;
+    position: relative;
+}
+.scrollBar::-webkit-scrollbar-thumb {
+    background-color: #540095;
+    border-radius: 10px;
+}
+.scrollBar::-webkit-scrollbar-track {
+    background-color: #080808;
+    border-radius: 10px;
+}
+.downloadButton {
+    left: 25px;
+    position: relative;
+    background-color: #540095;
+    border-radius: 7px;
+    border-color: #540095;
+    border-style: solid;
+    padding: 10px;
+    color: white;
+    font-family: "SourceCodePro";
+    transition: 0.1s;
+    width: 180px;
+    text-align: center;
+    margin-top: 20px;
+}
+.downloadButton:hover {
+    border-left-width: 20px;
+    border-color: #46007b;
+    background-color: #46007b;
+    border-radius: 10px;
 }

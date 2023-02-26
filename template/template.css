@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "SourceCodePro";
+    src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+}
+body {
+    font-family: "SourceCodePro";
+}
+div {
+    font-family: "SourceCodePro";
+}
+a {
+    font-family: "SourceCodePro";
+}
+pre {
+    font-family: "SourceCodePro";
+}
+p {
+    font-family: "SourceCodePro";
+}
+.text {
+    color: white;
+}
+.textBold {
+    color: #dcadff;
+    font-weight: bold;
+}
+.remove-hyperlinks {
+    text-decoration: none;
+    color: #c06dff;
+}
+.hover-img {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    width: 300px;
+    border-radius: 10px;
+    border: #c06dff;
+    border-width: 2px;
+    border-style: solid;
+}
+  

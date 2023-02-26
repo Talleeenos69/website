@@ -1,0 +1,80 @@
+<!--Put this file in '/html' once completed and put a link to it in 'index.html'-->
+<!--Put your 'template.css' into the '/css' folder and make a reference to it in this html file-->
+<!--Put your JavaSript files into '/js/"your-section-name-here"' and make a reference to them in this html file
+i.e. "<script src="../js/minecraftServer/setDivWidthAtLoad.js"></script>"-->
+
+<!DOCTYPE html>
+<!--Add your css stylesheet location current: ./template.css-->
+<link type="text/css" href="./template.css" rel="stylesheet" />
+<!------------------------------------------------------------>
+
+<html>
+<head>
+	<title> Title (Not needed) </title>
+</head>
+<!--Set the background color and set the width of the iframe on website load-->
+<body style="background-color: #101011" onload="setWidth()">
+<!---------------------------------------------------------------------------->
+
+    <!--Set the page's Heading here-->
+    <h1 class="text"> This is a Heading! </h1>
+    <!------------------------------->
+    
+    <!--White Line that goes across the screen-->
+    <div style="height: 2px; width: 100%; background-color: white;"> </div>
+    <!------------------------------------------>
+
+    <br>
+
+    <!--Adds a section to write text, sets width of text element to 70% of the page-->
+    <p class="text" style="width: 70%">
+    <!------------------------------------------------------------------------------->
+
+    <!--Write a cool description here-->
+    This is a decription with a <a class="remove-hyperlinks" href="./template.html" target="_blank">link!</a><br><br>
+    <!--------------------------------->
+
+    <!--White Line that goes across the screen-->
+    <div style="height: 2px; width: 100%; background-color: white;"> </div>
+    <!------------------------------------------>
+
+    <br>
+    <!--Add the class "textBold" to a <p> element to make the text bold and purple!-->
+    <p class="textBold">This is bold text!<br><br></p>
+    <!------------------------------------------------------------------------------->
+
+    <!--Add the main page conent here!-->
+    <p class="text">
+    Add some content and other things to fill this page! <br>
+    This is more text on a new line! <br><br>
+    <!---------------------------------->
+
+    <!--Add the id "hover-text" to show an image when hovering over text!-->
+    <p class="textBold">
+    <a id="hover-text"> Hover on this text to see an image!
+    </p>
+    <!--------------------------------------------------------------------->
+
+    <p class="text">
+    </a><br><br><br><br>
+    Scroll down to see an image! <br>
+    Resize the window to see it dynamically change size!
+    <br><br><br><br><br>
+    </p>
+
+    <!--This is an Image. Set its location and its style! Give all images the id of "imagesWidth"
+    to make sure that they don't touch the edge of the screen!! Set its "max-width" to make
+    sure that it does not exceed a certain width-->
+    <img id="imagesWidth" src="./template.png" style="width: 100%; max-width: 700px; border-radius: 10px; position: relative;">
+    <!------------------------------------------------------------------------------------------>
+
+    <!--This image is used when hovering over specified text-->
+    <img src="./template.png" class="hover-img">
+    <!-------------------------------------------------------->
+
+    <!--Add scripts here-->
+    <script src="./imageHoverAtCursor.js"></script>
+    <script src="./setDivWidthAtLoad.js"></script>
+    <!-------------------->
+</body>
+</html>
