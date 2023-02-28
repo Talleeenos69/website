@@ -284,6 +284,7 @@
 		transition: 0.1s;
 		display: flex;
 		flex-flow: column;
+		z-index: 1000;
 	}
 	.iframe-wrapper.wide {
 		float: right;
